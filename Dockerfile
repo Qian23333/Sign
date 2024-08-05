@@ -9,7 +9,7 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 # Install any dependencies
-RUN pip install uvicorn fastapi websockets httpx loguru diskcache apscheduler SQLAlchemy python-dateutil -i https://pypi.tuna.tsinghua.edu.cn/simple
+RUN pip install uvicorn fastapi websockets httpx loguru diskcache apscheduler SQLAlchemy python-dateutil -i https://pypi.tuna.tsinghua.edu.cn/simple --no-cache-dir
 
 # Copy the rest of the application code into the container
 COPY sign.py .
